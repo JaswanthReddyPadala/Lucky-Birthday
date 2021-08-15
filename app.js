@@ -18,7 +18,7 @@ checkButton.addEventListener("click", function() {
         setTimeout(()=> {
             result.style.border = "2px solid #4741A6";
             if(dob % luckyNum > 0){
-                result.innerHTML = "<h2>Oh no, 😫 Your birthday is not lucky</h2>";
+                result.innerHTML = "<h2>Oh no, 😫 Your birthday is not your lucky day</h2>";
             }
             else{
                 result.innerHTML = "<h2>So cool, Your birthday is your lucky day 🤩🍰</h2>";
