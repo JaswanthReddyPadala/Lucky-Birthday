@@ -11,8 +11,8 @@ checkButton.addEventListener("click", function() {
     let dob = calculateDob(dateOfBirth.value);
     let luckyNum = luckyNumber.value;
     result.style.display = "flex";
-    if(luckyNum > 0 && dob != undefined){
-
+    if(luckyNum > 0 && dob){
+        result.style.display = "block";
         result.innerHTML = "<img src='https://media.giphy.com/media/l4KhS0BOFBhU2SYIU/giphy.gif' />"
         
         setTimeout(()=> {
