@@ -7,17 +7,29 @@ let result = document.querySelector(".result");
 
 
 checkButton.addEventListener("click", function() {
-    // console.log(dateOfBirth.value);
     result.innerText = "";
     let dob = calculateDob(dateOfBirth.value);
     let luckyNum = luckyNumber.value;
+    result.style.display = "flex";
+    if(luckyNum > 0 && dob != undefined){
 
-    if(dob % luckyNum > 0){
-        result.innerText = "Oh no, 😫 Your birthday is not lucky";
+        result.innerHTML = "<img src='https://media.giphy.com/media/l4KhS0BOFBhU2SYIU/giphy.gif' />"
+        
+        setTimeout(()=> {
+            result.style.border = "2px solid #4741A6";
+            if(dob % luckyNum > 0){
+                result.innerHTML = "<h2>Oh no, 😫 Your birthday is not lucky</h2>";
+            }
+            else{
+                result.innerHTML = "<h2>So cool, Your birthday is your lucky day 🤩🍰</h2>";
+            }
+        },2000);
     }
     else{
-        result.innerText = "So cool, Your birthday is your lucky day 🤩🍰";
+        alert('Please enter inputs correctly');
     }
+
+    
 })
 
 function calculateDob(dob){
