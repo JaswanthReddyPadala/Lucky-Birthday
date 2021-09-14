@@ -26,7 +26,7 @@ checkButton.addEventListener("click", function() {
         },2000);
     }
     else{
-        alert('Please enter inputs correctly');
+        result.innerHTML = "<h2>Please enter inputs correctly</h2>";
     }
 
     
